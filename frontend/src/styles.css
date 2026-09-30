@@ -1093,231 +1093,54 @@ select:focus {
 /* =========================================================
    ROUTES
 ========================================================= */
-
-.route-grid {
+.route-summary {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 14px;
-}
-
-.route-card {
-  padding: 22px;
-
-  border-radius: 18px;
-
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
-}
-
-.route-card:hover {
-  transform: translateY(-2px);
-
-  box-shadow: var(--shadow);
-}
-
-.route-top {
-  display: flex;
-
-  justify-content: space-between;
-}
-
-.route-card h3 {
-  margin: 5px 0 0;
-
-  font-size: 24px;
-
-  letter-spacing: -0.8px;
-}
-
-.status {
-  padding: 6px 9px;
-
-  border-radius: 999px;
-
-  background: var(--surface-soft);
-
-  color: var(--text-secondary);
-
-  font-size: 10px;
-
-  height: fit-content;
-}
-
-.active-status {
-  background: var(--green-soft);
-
-  color: var(--green);
-}
-
-.vehicle {
-  color: var(--text-secondary);
-
-  margin: 19px 0;
-
-  font-size: 13px;
-}
-
-.route-vehicle-row {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-
-  margin: 18px 0 8px;
+  margin: 14px 0;
 }
 
-.route-vehicle-row > div {
-  display: grid;
-
-  gap: 4px;
-
-  min-width: 0;
+.route-summary > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  min-height: 105px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-small);
 }
 
-.route-meta-label {
+.route-summary .card-kicker {
+  display: block;
   color: var(--text-tertiary);
-
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 1px;
 }
 
-.route-vehicle-row strong {
-  font-size: 12px;
-
-  overflow: hidden;
-
-  text-overflow: ellipsis;
-
-  white-space: nowrap;
-}
-
-.driver-phone {
-  color: var(--text-secondary);
-
-  font-size: 11px;
-
-  margin-bottom: 14px;
-}
-
-.capacity-label {
-  display: flex;
-
-  justify-content: space-between;
-
-  color: var(--text-tertiary);
-
-  font-size: 11px;
-}
-
-.capacity-label strong {
-  color: var(--text);
-}
-
-.bar {
-  height: 5px;
-
-  background: var(--surface-soft);
-
-  border-radius: 99px;
-
-  margin-top: 7px;
-
-  overflow: hidden;
-}
-
-.bar span {
+.route-summary strong {
   display: block;
-
-  height: 100%;
-
-  background: var(--accent);
-
-  border-radius: inherit;
+  color: var(--text);
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -1px;
 }
 
-.capacity-breakdown {
-  display: flex;
-
-  justify-content: space-between;
-
-  margin-top: 7px;
-
-  color: var(--text-tertiary);
-
-  font-size: 10px;
-}
-
-.capacity-breakdown strong {
-  color: var(--green);
-}
-
-.pickup-list {
-  margin-top: 20px;
-
-  display: grid;
-
-  gap: 10px;
-}
-
-.point {
-  display: flex;
-
-  gap: 10px;
-
-  align-items: center;
-}
-
-.point > span {
-  width: 25px;
-  height: 25px;
-
-  display: grid;
-
-  place-items: center;
-
-  border-radius: 50%;
-
-  background: var(--surface-soft);
-
+.route-summary > div > span:last-child {
+  display: block;
   color: var(--text-secondary);
-
-  font-size: 10px;
-
-  flex: 0 0 auto;
+  font-size: 11px;
 }
 
-.point div {
-  display: grid;
-
-  gap: 2px;
-
-  min-width: 0;
+@media (max-width: 760px) {
+  .route-summary {
+    grid-template-columns: 1fr;
+  }
 }
-
-.point small {
-  color: var(--text-tertiary);
-}
-
-.point strong,
-.point small {
-  overflow: hidden;
-
-  text-overflow: ellipsis;
-}
-
-.card-actions {
-  margin-top: 20px;
-}
-
 /* =========================================================
    TABLES
 ========================================================= */
