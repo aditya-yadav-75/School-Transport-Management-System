@@ -16,12 +16,6 @@ https://school-transport-management-system.vercel.app/
 
 https://school-transport-management-system.onrender.com/
 
-### Backend Health Endpoint
-
-https://school-transport-management-system.onrender.com/api/health
-
-> Note: The backend health endpoint is available for checking the deployed API service. API routes are accessed through the `/api` base path.
-
 ---
 
 ## GitHub Repository
